@@ -1,0 +1,23 @@
+Program 1
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+ 
+int main()
+{
+     char *name;
+     /* memory is allocated dynamically */
+     name = calloc( 20, sizeof(char) );
+     if( name== NULL )
+     {
+        printf("Couldn't able to allocate requested memory\n");
+     }
+     else
+     {
+         strcpy( name,"internshala.com");
+     }
+         printf("Dynamically allocated memory content   : " \
+                "%s\n", name );
+free(name);
+}

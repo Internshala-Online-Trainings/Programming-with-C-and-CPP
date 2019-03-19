@@ -1,0 +1,70 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include <iostream>
+using namespace std;
+namespace ns1
+{
+    int value = 10;    
+}
+namespace ns2 
+{
+    
+    double value = 0.5;
+}
+ 
+int main()
+{
+    // Access value variable within ns1
+    cout << ns1::value << '\n'; 
+ 
+    // Access value variable within ns2
+    cout << ns2::value << '\n'; 
+    return 0;
+}
+
+Program 2
+// Creating namespaces
+#include <iostream>
+using namespace std;
+namespace ns1
+{
+    int value()    { return 10; }
+}
+namespace ns2 
+{
+    double value() {  return 0.5; }
+}
+ using namespace ns1;
+int main()
+{
+    cout <<value() << '\n'; 
+ 
+   
+    return 0;
+}
+
+Program 3
+// Creating namespaces
+#include <iostream>
+using namespace std;
+namespace ns1
+{
+    int value()    { return 10; }
+}
+namespace ns2 
+{
+    double value() {  return 0.5; }
+}
+ 
+int main()
+{
+    // Access value function within ns1
+    cout << ns1::value() << '\n'; 
+ 
+    // Access value function within ns2
+    cout << ns2::value() << '\n'; 
+ 
+   
+    return 0;
+}

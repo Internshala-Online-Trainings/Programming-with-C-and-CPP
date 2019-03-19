@@ -1,0 +1,46 @@
+Below is the code used in the video.
+
+Program 1
+/**
+    * Question 
+    *In ICSE examinations on 3 subjects: English,Maths,and Science.
+    * Students are given offers to select their streams
+    * Based on the following conditions :
+    * Condition                               Stream 
+    * >= 70 in individual subjects            Pure Science
+    * >= 70 on Science >= 60 in others        Bio-Science
+    * >= 60 on Maths and >= 50                in others  Commerce
+    * Rest if passed in all subjects          Arts
+    * Less 30 in any subject will lead to failing
+    * An eligible person for any specific stream may
+    * Choose a stream with lower marks requirement
+    * Write a program to accept the marks for each subjects and print the stream offered
+    */
+
+#include <stdio.h>
+int main(void)
+{
+   int e, m, s;     
+   // Accept the marks
+   printf("\nEnter marks of English :");
+   scanf("%d", &e);
+   printf("\nEnter marks of Maths : ");
+   scanf("%d", &m);
+   printf("\nEnter marks of Science : ");
+   scanf("%d", &s);
+   // Assign the grades and print
+   if ( e >= 30 && m >= 30 && s >= 30)
+   {
+       if (e >= 70 && m >= 70 && s >= 70)
+       printf("Eligible for : Pure-Science, Bio-Science, Commerce and Humanities");
+       else if ( e >= 60 && m >= 60 && s >= 70)
+       printf ("Eligible for : Bio-Science, Commerce and Humanities");
+       else if ( e >= 50 && m >= 60 && s >= 50 )
+       printf ("Eligible for : Commerce and Humanities");
+       else
+       printf ("Eligible for : Humanities only");
+    }
+    else
+    printf ("Failed : Try next year");
+    return 0;
+}

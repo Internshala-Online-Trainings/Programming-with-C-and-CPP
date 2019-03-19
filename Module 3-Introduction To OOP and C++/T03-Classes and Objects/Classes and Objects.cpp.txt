@@ -1,0 +1,29 @@
+Below is the code which is used in the video.
+
+#include <iostream>
+using namespace std;
+class Rectangle
+{
+public:
+double length;   // Length of a rectangle
+       double breadth;  // Breadth of a rectangle
+ };
+int main()
+{
+Rectangle Rectangle1;        // Declare Rectangle1 of type Rectangle
+Rectangle Rectangle2;        // Declare Rectangle2 of type Rectangle
+double area = 0.0;     // Store the area of a rectangle here
+// rectangle 1 specification
+Rectangle1.length = 6.0; 
+Rectangle1.breadth = 7.0;
+// rectangle 2 specification
+Rectangle2.length = 5.0;
+Rectangle2.breadth = 6.0;
+// area of rectangle 1
+area = Rectangle1.length * Rectangle1.breadth;
+cout << "Area of Rectangle1 : " << area <<endl;
+// area of rectangle 2
+area = Rectangle2.length * Rectangle2.breadth;
+cout << "Area of Rectangle2 : " << area <<endl;
+return 0;
+}

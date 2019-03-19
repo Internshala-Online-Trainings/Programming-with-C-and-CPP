@@ -1,0 +1,49 @@
+Below is the code which is used in the video.
+
+#include <iostream>
+using namespace std;
+// Base class
+class Shape {
+   public:
+      // pure virtual function providing interface framework.
+      virtual int getArea() = 0;
+      void setWidth(int w) {
+         width = w;
+      }
+   
+      void setHeight(int h) {
+         height = h;
+      }
+      void setSidet(int s) {
+         side = s;
+      }   
+   protected:
+      int width;
+      int height;
+      int side;
+}; 
+// Derived classes
+class Rectangle: public Shape {
+   public:
+      int getArea() { 
+         return (width * height); 
+      }
+};
+class Square: public Shape {
+   public:
+      int getArea() { 
+         return (side* side); 
+      }
+};
+int main(void) {
+   Rectangle Rect;
+   Square Sq;
+   Rect.setWidth(3);
+   Rect.setHeight(6);  
+   // Print the area of the object.
+   cout << "Total Rectangle area: " << Rect.getArea() << endl;
+   Sq.setSidet(5);
+   // Print the area of the object.
+   cout << "Total Square area: " << Sq.getArea() << endl; 
+   return 0;
+}

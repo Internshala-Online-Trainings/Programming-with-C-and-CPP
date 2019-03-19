@@ -1,0 +1,31 @@
+Below is the code which is used in the video.
+
+
+//Bubble Sort//
+# include<stdio.h>
+
+int main()
+{
+int  i,temp, j;
+
+int a[] = {13, 24, 5, 19, 2, 17, 4};
+/* This is the main logic of bubble sort algorithm */
+for(i=5;i>=0;i--)
+{
+for(j=0;j<=i;j++)
+{
+if(a[j]>a[j+1])
+{
+temp=a[j];
+a[j]=a[j+1];
+a[j+1]=temp;
+}
+}
+}
+
+printf("Sorted elements: ");
+for(i=0;i<7;i++)
+printf(" %d",a[i]);
+
+return 0;
+}

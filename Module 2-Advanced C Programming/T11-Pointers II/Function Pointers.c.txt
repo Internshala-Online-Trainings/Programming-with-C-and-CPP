@@ -1,0 +1,17 @@
+Program 1
+
+#include<stdio.h>
+int sum (int num1, int num2)
+{
+   return num1+num2;
+}
+int main()
+{
+   //declaring a function pointer 
+   int (*fp) (int, int);
+   fp = sum;
+   //Calling function using function pointer
+   int result = fp(10, 5);
+   printf("result: Call using function pointer: %d",result);
+   return 0;
+}

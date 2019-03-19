@@ -1,0 +1,47 @@
+Below is the code which is used in the video.
+
+
+// Merge arr1[0..n1-1] and b[0..n2-1] into
+// arr3[0..n1+n2-1]
+// Program code
+void mergeArrays(int a[], int b[], int c[]);
+int main()
+{
+int i;
+ int a[] = {3, 6, 8, 9, 10, 13, 14};
+   int b[]  = {4, 6, 7, 10, 16};
+
+int c[12];
+mergeArrays(a, b, c);
+printf("Array after merging\n");
+for ( i=0; i < 12; i++)
+printf("%d ", c[i]); 
+
+return 0;
+}
+
+void mergeArrays(int a[], int b[], int c[])
+{
+int i = 0, j = 0, k = 0;
+// Traverse both array
+while (i<7 && j <5)
+{
+// Check if current element of first
+// array is smaller than current element
+// of second array. If yes, store first
+// array element and increment first array
+// index. Otherwise do same with second array
+if (a[i] < b[j])
+c[k++] = a[i++];
+else
+c[k++] = b[j++];
+}
+
+// Store remaining elements of first array
+while (i < 7)
+c[k++] = a[i++];
+
+// Store remaining elements of second array
+while (j < 5)
+c[k++] = b[j++];
+}

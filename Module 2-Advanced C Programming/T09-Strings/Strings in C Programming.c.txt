@@ -1,0 +1,244 @@
+Below are the codes which are used in the video.
+
+#include <stdio.h>
+#include <string.h>  
+int main()
+{
+    char str1[12] = "Hello";
+    char str2[12] = "Team";
+    char str3[12];
+    int len ;
+    /*copy str1 into str3 */
+    strcpy(str3, str1);
+    printf("strcpy(str3, str1) : %s\n", str3 );
+    
+    /*concatenates str1 and str2 */
+    strcat (str1, str2);
+    printf("strcat(str1, str2) : %s\n", str1 );
+
+    /*total lenghth of str1 after concatenation */
+    len = strlen (str1);
+    printf("strlen(str1) : %d\n", len );
+    return 0;
+}
+
+In this helper text we are providing a list of popular functions that exist under the header file <string.h>. This is no way a complete list of functions. If you want to learn further, you are advised to refer to your C compiler’s manual or documentation to check the details of the functions that are missing here.
+
+size_t strlen(const char *str)
+
+Description
+
+The C library function size_t strlen(const char *str) computes the length of the string str up to, but not including the terminating null character.
+
+Declaration
+
+size_t strlen(const char *str)
+
+Parameters
+
+str - This is the string whose length is to be found.
+
+Return Value
+
+This function returns the length of string.
+
+Example
+
+The following example shows the usage of strlen() function.
+
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+	char str[50];
+	int len;
+	strcpy(str, "Hello World");
+	len = strlen(str);
+	printf("Length of |%s| is |%d|\n", str, len);
+	return(0);
+}
+
+Output
+
+Length of |Hello World| is |11|
+
+*strcpy(char *dest, const char *src)
+
+Description
+
+The C library function char *strcpy(char *dest, const char *src) copies the string pointed to, by src to dest.
+
+Declaration
+
+char *strcpy(char *dest, const char *src)
+
+Parameters
+
+dest - This is the pointer to the destination array where the content is to be copied.
+
+src - This is the string to be copied.
+
+Return Value
+
+This returns a pointer to the destination string dest.
+
+Example
+
+The following example shows the usage of strcpy() function.
+
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+	char src[40];
+	char dest[100];
+	memset(dest, '\0', sizeof(dest));
+	strcpy(src, "Hello World");
+	strcpy(dest, src);
+	printf("Final copied string : %s\n", dest);
+	return(0);
+}
+
+Output
+
+Final copied string : Hello World
+
+strcmp(const char *str1, const char *str2)
+
+Description
+
+The C library function int strcmp(const char *str1, const char *str2) compares the string pointed to, by str1 to the string pointed to by str2.
+
+Declaration
+
+int strcmp(const char *str1, const char *str2)
+
+Parameters
+
+str1 - This is the first string to be compared.
+
+str2 - This is the second string to be compared.
+
+Return Value
+
+This function return values that are as follows -
+
+if Return value < 0 then it indicates str1 is less than str2.
+
+if Return value > 0 then it indicates str2 is less than str1.
+
+if Return value = 0 then it indicates str1 is equal to str2.
+
+Example
+
+The following example shows the usage of strncmp() function.
+
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+	char str1[15];
+	char str2[15];
+	int ret;
+	strcpy(str1, "abcdef");
+	strcpy(str2, "ABCDEF");
+	ret = strcmp(str1, str2);
+	if(ret < 0)
+	{
+		printf("str1 is less than str2");
+	}
+	else if(ret > 0)
+	{
+		printf("str2 is less than str1");
+	}
+	else
+	{
+		printf("str1 is equal to str2");
+	}
+	return(0);
+}
+
+Output
+
+str2 is less than str1
+
+*strcat(char *dest, const char *src)
+
+Description
+
+The C library function char *strcat(char *dest, const char *src) appends the string pointed to by src to the end of the string pointed to by dest.
+
+Declaration
+
+char *strcat(char *dest, const char *src)
+
+Parameters
+
+dest - This is pointer to the destination array, which should contain a C string, and should be large enough to contain the concatenated resulting string.
+
+src - This is the string to be appended. This should not overlap the destination.
+
+Return Value
+
+This function returns a pointer to the resulting string dest.
+
+Example
+
+The following example shows the usage of strcat() function.
+
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+	char src[50], dest[50];
+	strcpy(src, "This is source");
+	strcpy(dest, "This is destination");
+	strcat(dest, src);
+	printf("Final destination string : |%s|", dest);
+	return(0);
+}
+
+Output
+
+Final destination string : |This is destinationThis is source|
+
+*strrchr(const char *str, int c)
+
+Description
+
+The C library function char *strrchr(const char *str, int c) searches for the last occurrence of the character c (an unsigned char) in the string pointed to, by the argument str.
+
+Declaration
+
+char *strrchr(const char *str, int c)
+
+Parameters
+
+str - This is the C string.
+
+c - This is the character to be located. It is passed as its int promotion, but it is internally converted back to char.
+
+Return Value
+
+This function returns a pointer to the last occurrence of character in str. If the value is not found, the function returns a null pointer.
+
+Example
+
+The following example shows the usage of strrchr() function.
+
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+	int len;
+	const char str[] = "http://vtc.internshala.com&quot;;
+	const char ch = '.';
+	char *ret;
+	ret = strrchr(str, ch);
+	printf("String after |%c| is - |%s|\n", ch, ret);
+	return(0);
+}
+
+Output
+
+String after |.| is - |.com|

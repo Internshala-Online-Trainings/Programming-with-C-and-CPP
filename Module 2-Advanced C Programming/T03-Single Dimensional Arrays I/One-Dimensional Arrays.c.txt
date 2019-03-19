@@ -1,0 +1,14 @@
+Below is the code which is used in the video.
+
+
+#include<stdio.h>
+void main()
+{
+int marks[5] = { 4,5,9,7,8};
+int i;
+for(i=0;i<5;i++)
+{
+printf("Element stored at a[%d] = %d \n",i,marks[i]);
+}
+getch();
+}

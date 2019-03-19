@@ -1,0 +1,50 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include <stdio.h>
+int main(void)
+{
+  int a, b, c;
+  printf("Enter a,b,c: ");
+  scanf("%d %d %d", &a, &b, &c);
+  if (a > b && a > c)
+  { 
+     printf("a is greatest ");
+  } 
+  else if (b > a && b > c) 
+  {
+     printf("b is greatest");
+  } 
+  else if (c > a && c > b)
+  { 
+     printf("c is greatest");
+  } 
+  else
+  { 
+      printf("All or any two numbers  are equal");
+   }
+}
+
+
+Program 2
+#include <stdio.h>
+int main(void)
+{
+   int yourmarks;
+   printf("Enter yourmarks");
+   scanf("%d",&yourmarks);
+   int passingMarks=40;
+   if(yourmarks >= passingMarks)
+   {
+        if(yourmarks>90)
+          printf("You have passed the exam and your grade is A");
+    else if (yourmarks>75)
+          printf("You have passed the exam and your grade is B");
+else        
+          printf("You have passed the exam and your grade is C");
+    }
+    else
+    {
+         printf("You have failed the exam");
+    }
+}

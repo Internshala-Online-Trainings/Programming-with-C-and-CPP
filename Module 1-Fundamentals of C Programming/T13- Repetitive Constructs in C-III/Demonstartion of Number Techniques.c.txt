@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+int i,j;
+for(i = 1; i <= 5; i++) // for number of rows
+{
+for(j = 1; j <= i; j++) // for columns
+{
+printf("%d", j);
+}
+         printf("\n");
+     }
+}

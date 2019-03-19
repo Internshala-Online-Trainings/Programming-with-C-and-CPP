@@ -1,0 +1,33 @@
+Below is the code which is used in the video.
+
+Program 1
+/**
+ * C program to print Fibonacci series Fibonacci series: 
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34 u. n 
+ */
+#include <stdio.h>
+int main()
+{
+int a, b, c,n, i, terms;
+
+/* Input number from user */
+printf("Enter number of terms: ");
+scanf("%d", &n);
+
+/* Fibonacci initialization */
+a = 0;  // Current term
+b = 1;  //n-1th term
+c = 0; //n-2th term
+
+printf("Fibonacci terms: \n");
+
+/* Iterate through n terms */
+for(i=1; i<=n; i++)
+{
+printf("%d, ", c);
+a = b;     // Copy n-1 to n-2
+b = c;     // Copy current to n-1
+c = a + b; // New term
+}
+return 0;
+}

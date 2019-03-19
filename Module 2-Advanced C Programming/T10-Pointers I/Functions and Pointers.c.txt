@@ -1,0 +1,24 @@
+Program 1
+
+#include<stdio.h>
+int *bigger(int *x, int *y)
+{
+if(*x > *y)
+{
+return(x);
+}
+else
+{
+return(y);
+}
+}
+int main()
+{
+int num1, num2, *c;
+printf("Enter two integers : \n");
+scanf(" %d", &num1 );
+scanf(" %d", &num2 );
+c = (int *) bigger(&num1, &num2);
+printf("The bigger value = %d", *c);
+return 0;
+}

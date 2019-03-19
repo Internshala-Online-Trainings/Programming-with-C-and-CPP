@@ -1,0 +1,66 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include <iostream>
+using namespace std;
+class Square
+{
+public:
+int side;
+Square(int x)
+  {
+  side=x;
+  }
+  Square (Square &s) // Copy constructor s is an object of type Square
+  {
+side = s.side;  // 
+  }
+};
+int main()
+{
+Square c1(10);
+Square c2(c1); // Copy constructor used .... Here c1 is sent as a parameter
+cout << c2.side << endl;
+}
+
+Program 2
+#include <iostream>
+using namespace std;
+
+class square
+{
+public:
+int side;
+square()
+{
+side=20;
+}
+};
+
+int main()
+{
+square c;
+cout << c.side;
+}
+
+Program 3
+#include <iostream>
+using namespace std;
+class Square
+{
+public:
+int side;
+Square(int x)
+   {
+side=x;
+}
+};
+int main()
+{
+Square c1(10);
+Square c2(20);
+Square c3(30);
+cout << c1.side<<endl;
+cout << c2.side<<endl;
+cout << c3.side<<endl;
+}

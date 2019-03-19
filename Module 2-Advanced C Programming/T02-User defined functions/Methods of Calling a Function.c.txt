@@ -1,0 +1,55 @@
+Below is the code which is mentioned in the video.
+
+#include<stdio.h>
+void swap(int a, int b)
+{
+int c;
+c = a;
+a = b;
+b = c;
+printf("Swapped values are x=%d and y=%d\n",a,b);
+}
+
+int main(int argc, char *argv[])
+{
+int x=7,y=4;
+printf("Original values are x=%d and y=%d\n",x,y);
+swap(x,y);
+printf("The values after swap are x=%d and y=%d",x,y);
+}
+
+
+
+
+Program 1
+Check for Prime Number using function
+
+
+#include <stdio.h>
+#include <stdlib>
+int isPrime(int n)
+{
+
+     int i;
+     for(i = 2; i <= n-1; i++)
+    {
+         if (n % i == 0)
+             return 0;
+
+    }
+
+    return 1;
+}
+
+int main()
+{
+       int n;
+       // Ask for a number
+       printf ("Enter a number : ");
+       scanf("%d", &n);
+       if (isPrime(n))
+           printf("%d is Prime number", n)
+       else
+           printf("%d is not Prime number", n);
+       return 0;
+}

@@ -1,0 +1,63 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include<stdio.h>
+int main()
+{
+    int i=7;
+    while(i<=500)
+    {
+        printf("%d",i);
+        printf("\n");
+            i +=7;
+    }
+    return 0;
+}
+
+
+Program 2
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+int main(void)
+{ 
+    char ch1;
+int ch;
+float l, b, peri, area, diag;
+do
+{
+    
+printf("Rectangle Menu");
+printf("\n 1. Area");
+printf("\n 2. Perimeter");
+printf("\n 3. Exit\n");
+printf("\nEnter your choice: ");
+scanf("%d", &ch);
+if(ch == 1 || ch == 2)
+{
+printf("Enter length & breadth: ");
+scanf("%f", &l);
+scanf("%f", &b);
+}
+switch(ch)
+{
+case 1 : area = l * b ;
+printf("Area = %f",area);
+break ;
+case 2 : peri = 2 * (l + b);
+printf("Perimeter = %f",peri);
+break;
+
+case 3 : printf("Breaking..Press a key..");
+getch();
+exit(1);
+default : printf("Wrong choice !!!!");
+printf("\nEnter a valid one");
+break;
+}     //end of switch
+printf("\nWant to enter more (y/n) ? ");
+scanf("%s", &ch1);
+
+}while(ch1 == 'y' || ch1 == 'Y');
+    getch();
+}

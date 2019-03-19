@@ -1,0 +1,47 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include <stdio.h>   
+int main()
+ { 
+int num1, num2;
+
+    /* Input two numbers from user */
+    printf("Enter two numbers: ");
+    scanf("%d%d", &num1, &num2);
+
+    /* If num1 is greater */
+    if(num1 > num2)
+    {
+        printf("%d is greater", num1);        
+    }
+
+    /* If num2 is greater */
+    if(num2 > num1)
+    {
+        printf("%d is greater", num2);
+    }
+
+    /* If num2 is equal to num1 */
+    if(num1 == num2)
+    {
+       printf("Given numbers are equal");
+    }
+
+    return 0;
+}
+
+
+Program 2
+#include <stdio.h>
+void main()
+{
+    int num;
+    printf("Enter an  integer \n");
+    scanf("%d", &num);
+    if (num >= 0)
+        printf("%d is greater than or equal to zero \n", num);
+    else
+        printf("%d is less than zero \n", num);
+    return 0;
+}

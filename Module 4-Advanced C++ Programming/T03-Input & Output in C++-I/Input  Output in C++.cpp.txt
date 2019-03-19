@@ -1,0 +1,39 @@
+Below are the codes which are used in the video.
+
+
+Program 1
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+   char str[] = " Internshala  ";
+ 
+   cout << str <<"- A no.1 internship & training website for students " <<  endl;
+}
+
+Program 2
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int rollnum;
+     
+    cout << "Enter your roll number:";
+    cin >> rollnum;
+    cout << "\nYour roll number  is: "<<rollnum;
+     
+    return 0;
+}
+
+Program 3
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+   char str[] = "Unable to read";
+ 
+   cerr << "An error occured : " << str << endl;
+}

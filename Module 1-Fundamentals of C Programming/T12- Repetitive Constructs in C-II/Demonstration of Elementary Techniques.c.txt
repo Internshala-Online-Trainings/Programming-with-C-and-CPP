@@ -1,0 +1,68 @@
+Below are the codes which are used in the video.
+
+Program 1
+/* Find the sum of all numbers between 1 and 10 */
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+// Declaring variable
+int i, s = 0;
+// Loop Section
+for (i = 1; i <= 10; i++)
+{
+s = s + i;
+}
+// Printing the sum of 10 numbers
+printf("Sum = %d\n", s);
+return 0;
+}
+
+
+Program 2
+/* Print the minimum and maximum of 10 numbers accepted from user */
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+// Declare variables
+int n, i, min, max;
+// Accept the first number
+printf("Enter a number : ");
+scanf("%d", &n);
+// Initialize min and max
+min = max = n;
+
+for(i=2; i <= 10; i++)
+{
+printf("Enter a number : ");
+scanf("%d", &n);
+         if (min > n)
+             min = n;
+         if (max < n)
+             max = n;
+     }
+printf ("Minimum = %d   Maximum = %d", min, max);
+return 0;
+}
+
+
+Program 3
+/*Print the factors for a number*/
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+// Declare variables
+int n, i;
+
+// Accept a number
+printf("Enter a number : ");
+scanf("%d", &n);
+for(i=1; i <= n; i++)
+{
+if (n % i == 0)
+printf("%d ", i);
+}
+return 0;
+}

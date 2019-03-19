@@ -1,0 +1,22 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include <stdio.h>
+int main()
+{
+   int a = 9, b =12, c = 12, i;
+   i = (a + b)/2 - 2*c;  
+   printf("%d\n", i);
+   
+}
+
+
+Program 2
+#include <stdio.h>
+int main()
+{
+   int a = 9, b =12, c = 12, i;
+   i = a + b/2 - 2*c;  
+   printf("%d\n", i);
+   
+}

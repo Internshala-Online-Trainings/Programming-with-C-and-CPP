@@ -1,0 +1,49 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include<stdio.h>
+int main()
+{
+   int a[2][3] = {{3,6,8},{9,3,4}};
+   int i, j;
+   printf("Two Dimensional array elements:\n");
+   for(i=0; i<2; i++) // loop to control rows
+   {
+      for(j=0;j<3;j++) // loop to control columns
+  {
+         printf("%d ", a[i][j]);
+      }
+      printf("\n");
+   }
+   return 0;
+}
+
+Program 2
+#include<stdio.h>
+int main(){
+/* 2D array declaration*/
+   
+   int a[2][3] = {{3,6,8},{9,3,4}};
+   int i, j, sum = 0;
+   printf("Two Dimensional array elements:\n");
+   for(i=0; i<2; i++) // loop to control rows
+   {
+      for(j=0;j<3;j++) // loop to control columns
+  {
+         printf("%d ", a[i][j]);
+      }
+      printf("\n");
+   }
+
+for (j= 0; j < 3; ++j)
+  {
+     for (i = 0; i < 2; ++i)
+     {
+         sum = sum + a[i][j];
+     }
+      printf("Sum of the %d column is = %d\n", j, sum);
+      sum = 0;
+  }
+
+   return 0;
+}

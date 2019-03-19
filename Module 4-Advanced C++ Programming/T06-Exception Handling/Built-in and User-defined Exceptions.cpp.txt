@@ -1,0 +1,50 @@
+Below are the codes which are used in the video.
+
+
+Program 1
+#include<iostream>
+using namespace std;
+
+// define a new exception inheriting from the base class 
+class new_exception : public exception {
+public :
+   const char *what() const throw() {
+      return "New exception thrown";
+   }
+};
+
+int main() {
+   try {
+      throw new_exception();
+   } catch (new_exception &e) {
+      cout << "Caught : " << e.what() << endl;
+   } catch (...) { // default exception
+      cout << "Other exception thrown" << endl;
+   }
+   return 0;
+}
+
+Program 2
+#include<iostream>
+using namespace std;
+
+void func(int size) {
+   int *arr = new int[size];
+   int i;
+   for (i = 0; i < size; i++) {
+      arr[i] = i;
+   }
+}
+
+int main() {
+   int size = 2000000000000000000; // abnormally large size
+   try {
+      cout << "Calling func() " << endl;
+      func(size);
+   }  catch (bad_exception &e) {
+      cout << "Exception found : " << e.what() << endl;
+      } catch (bad_alloc &e) {
+      cout << "Exception Caught : " << e.what() << endl;
+   } 
+   return 0;
+}

@@ -1,0 +1,22 @@
+Below is the code which is used in the video.
+
+#include<stdio.h>
+// function prototype, also called function declaration
+float cube ( float x );                               
+// main function, program starts from here
+ int main( )               
+{
+float m, n ;
+printf ( "\nEnter some number for finding cube \n");
+scanf ( "%f", &m ) ;
+// function call
+n = cube ( m ) ;                      
+printf ( "\ncube of the given number %f is %f",m,n );
+}
+ 
+float cube ( float x )   // function definition
+{
+float p ;
+p = x * x * x ;
+return ( p );
+}

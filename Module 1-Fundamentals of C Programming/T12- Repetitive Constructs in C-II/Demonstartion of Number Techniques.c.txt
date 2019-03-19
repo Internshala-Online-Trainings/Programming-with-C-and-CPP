@@ -1,0 +1,32 @@
+Below is the code which is used in the video.
+
+Program 1
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+// Declare variables
+int d, r=0, n, t;
+
+// Accept a number
+printf("Enter a number : ");
+scanf ("%d", &n);
+
+t = n;
+
+// Calculate the reverse
+while (n > 0)
+{
+d = n % 10; // Split the last digit
+r = r*10+d; // add d into r * 10 - r is storing the reverse
+n = n / 10; // remove the last digit from the number
+}
+// Print the reverse
+printf("Reverse : %d", r);
+if (t == r)
+printf("The number is palindrome\n");
+     else
+     printf("The number is not palindrome\n");
+return 0;
+}

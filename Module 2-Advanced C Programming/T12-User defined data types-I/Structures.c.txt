@@ -1,0 +1,30 @@
+Program 1
+
+#include <stdio.h>
+#include <string.h> 
+struct student 
+{
+           int rollnum;
+           char name[20];
+           float percentage;
+}student1, student2;
+
+int main() 
+{
+           student1.rollnum=1;
+           strcpy(student1.name, "Deepak");
+           student1.percentage = 86.5;
+ 
+           printf(" Roll number  is: %d \n", student1.rollnum);
+           printf(" Name is: %s \n", student1.name);
+           printf(" Percentage is: %f \n", student1.percentage);
+           
+           student2.rollnum=2;
+           strcpy(student2.name, "Ishan");
+           student2.percentage = 96.5;
+ 
+           printf(" Roll number is: %d \n", student2.rollnum);
+           printf(" Name is: %s \n", student2.name);
+           printf(" Percentage is: %f \n", student2.percentage);
+           return 0;
+}

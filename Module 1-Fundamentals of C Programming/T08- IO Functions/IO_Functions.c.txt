@@ -1,0 +1,33 @@
+Below are the codes which are used in the video.
+
+Program 1
+#include <stdio.h>
+int main()
+{
+   char ch = 'T';
+   char str[20] = "internshala.com";
+   float flt = 10.154;
+   int no = 100;
+   double dbl = 21.123456;
+   printf("Character is %c \n", ch);
+   printf("String is %s \n" , str);
+   printf("Float value is %f \n", flt);
+   printf("Integer value is %d\n" , no);
+   printf("Double value is %lf \n", dbl);  
+   return 0;
+}
+
+
+Program 2
+#include <stdio.h>
+int main()
+{
+   char ch;
+   char str[100];
+   printf("Enter any character \n");
+   scanf("%c", &ch);
+   printf("Entered character is %c \n", ch);
+   printf("Enter any string ( upto 100 character ) \n");
+   scanf("%s", &str);
+   printf("Entered string is %s \n", str);
+}
