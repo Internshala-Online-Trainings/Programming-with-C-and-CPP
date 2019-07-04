@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+	int x, y, ch;
+	printf("Enter value for x : ");
+	scanf(" %d", &x);
+	printf("Enter value for y : ");
+	scanf(" %d", &y);
+	printf ("+++ Calculator +++ \n");
+	printf ("1) Add \n");
+	printf ("2) Subtract \n");
+	printf ("3) Multiply \n");
+	printf ("4) Divide \n" );
+	printf ("Enter your choice 1-4 : ");
+	scanf(" %d", &ch);
+	switch(ch)
+	{
+		case 1:
+		printf("\nResult is : %d \n", x + y);
+		break;
+		case 2:
+		printf("\nResult is : %d \n", x - y );
+		break;
+		case 3:
+		printf("\nResult is : %d \n", x * y );
+		break;
+		case 4:
+		printf("\nResult is : %d \n", x / y );
+		break;
+	
+	}
+}
